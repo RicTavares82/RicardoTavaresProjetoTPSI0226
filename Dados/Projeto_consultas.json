@@ -1,8 +1,8 @@
 [
     {
         "id": 1,
-        "nome": "Ana Martins",
-        "idade": 34,
+        "nome": "Rui125112",
+        "idade": "21",
         "cidade": "Lisboa",
         "area_profissional": "Marketing Digital",
         "assunto": "Ansiedade Profissional",
@@ -87,7 +87,7 @@
         "id": 7,
         "nome": "Helena Vaz",
         "idade": 37,
-        "cidade": "\u00c9vora",
+        "cidade": "Lisboa",
         "area_profissional": "Arquiteta",
         "assunto": "Autoestima",
         "genero": "f",
@@ -129,7 +129,7 @@
         "id": 10,
         "nome": "Lu\u00eds Mendes",
         "idade": 60,
-        "cidade": "Aveiro",
+        "cidade": "Lisboa",
         "area_profissional": "Contabilista",
         "assunto": "Planeamento de Reforma",
         "genero": "m",
