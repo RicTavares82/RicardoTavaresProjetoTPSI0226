@@ -161,3 +161,16 @@ listagem = [
 
 for cliente in listagem:
     print(cliente["id"])
+
+
+# cliente_variavel = input("Valor da Consulta: ")
+# if not cliente_variavel.replace(".", "").isdigit():
+#     print("\nTem de usar números para o valor da consulta.")
+# else:
+#     cliente["valor_consulta"] = float(cliente_variavel)
+
+# print(cliente["valor_consulta"])
+
+
+cliente_variavel = input("cliente: ")
+print("\nCliente encontrado:", cliente_variavel)

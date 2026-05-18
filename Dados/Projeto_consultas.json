@@ -1,8 +1,8 @@
 [
     {
         "id": 1,
-        "nome": "Rui125112",
-        "idade": "21",
+        "nome": "Rui Costa",
+        "idade": 21,
         "cidade": "Lisboa",
         "area_profissional": "Marketing Digital",
         "assunto": "Ansiedade Profissional",
@@ -11,13 +11,14 @@
         "tipo_consulta": "online",
         "data_consulta": "2024-05-15",
         "casado": true,
-        "filhos": true
+        "filhos": true,
+        "notas": "teste"
     },
     {
         "id": 2,
         "nome": "Ricardo Pereira",
         "idade": 28,
-        "cidade": "Porto",
+        "cidade": "Lisboa",
         "area_profissional": "Engenharia de Software",
         "assunto": "Gest\u00e3o de Tempo",
         "genero": "m",
@@ -25,7 +26,8 @@
         "tipo_consulta": "presencial",
         "data_consulta": "2024-05-16",
         "casado": false,
-        "filhos": false
+        "filhos": false,
+        "notas": "Cliente com preocupa\u00e7\u00f5es sobre a aposentadoria e sa\u00fade financeira."
     },
     {
         "id": 3,
@@ -39,7 +41,8 @@
         "tipo_consulta": "presencial",
         "data_consulta": "2024-05-18",
         "casado": true,
-        "filhos": true
+        "filhos": true,
+        "notas": "Cliente com preocupa\u00e7\u00f5es sobre a aposentadoria e sa\u00fade financeira."
     },
     {
         "id": 4,
@@ -53,7 +56,8 @@
         "tipo_consulta": "online",
         "data_consulta": "2024-05-20",
         "casado": false,
-        "filhos": false
+        "filhos": false,
+        "notas": "Cliente com preocupa\u00e7\u00f5es sobre a aposentadoria e sa\u00fade financeira."
     },
     {
         "id": 5,
@@ -67,7 +71,8 @@
         "tipo_consulta": "online",
         "data_consulta": "2024-05-22",
         "casado": true,
-        "filhos": false
+        "filhos": false,
+        "notas": "Cliente com preocupa\u00e7\u00f5es sobre a aposentadoria e sa\u00fade financeira."
     },
     {
         "id": 6,
@@ -81,7 +86,8 @@
         "tipo_consulta": "presencial",
         "data_consulta": "2024-05-25",
         "casado": true,
-        "filhos": true
+        "filhos": true,
+        "notas": "Cliente com preocupa\u00e7\u00f5es sobre a aposentadoria e sa\u00fade financeira."
     },
     {
         "id": 7,
@@ -95,7 +101,8 @@
         "tipo_consulta": "online",
         "data_consulta": "2024-05-26",
         "casado": false,
-        "filhos": true
+        "filhos": true,
+        "notas": "Cliente com preocupa\u00e7\u00f5es sobre a aposentadoria e sa\u00fade financeira."
     },
     {
         "id": 8,
@@ -109,7 +116,8 @@
         "tipo_consulta": "presencial",
         "data_consulta": "2024-05-28",
         "casado": false,
-        "filhos": false
+        "filhos": false,
+        "notas": "Cliente com preocupa\u00e7\u00f5es sobre a aposentadoria e sa\u00fade financeira."
     },
     {
         "id": 9,
@@ -123,7 +131,8 @@
         "tipo_consulta": "online",
         "data_consulta": "2024-05-30",
         "casado": false,
-        "filhos": false
+        "filhos": false,
+        "notas": "Cliente com preocupa\u00e7\u00f5es sobre a aposentadoria e sa\u00fade financeira."
     },
     {
         "id": 10,
@@ -137,6 +146,7 @@
         "tipo_consulta": "presencial",
         "data_consulta": "2024-06-01",
         "casado": true,
-        "filhos": true
+        "filhos": true,
+        "notas": "Cliente com preocupa\u00e7\u00f5es sobre a aposentadoria e sa\u00fade financeira."
     }
 ]
