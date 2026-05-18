@@ -61,7 +61,7 @@ def menu2():
     return escolha
 
 
-# definition - uma função para gerar o próximo ID, que é o ID do último cliente + 1, ou 1 se a lista estiver vazia.
+# definition - função para gerar o próximo ID, que é o ID do último cliente + 1, ou 1 se a lista estiver vazia.
 def gerar_proximo_id(lista_clientes):
     if not lista_clientes:  # uso a negação para verificar se a lista está vazia, o que é mais eficiente do que verificar o comprimento da lista
         return 1  # Se a lista estiver vazia, o primeiro ID é 1
@@ -71,7 +71,7 @@ def gerar_proximo_id(lista_clientes):
     return ultimo_id + 1
 
 
-# definition - uma função para pesquisar um cliente.
+# definition -  função para pesquisar um cliente.
 def pesquisar_clientes():
     flag = True
     while flag:
@@ -191,7 +191,7 @@ def pesquisar_clientes():
                     print("\nOpção inválida, escolha de novo.")
 
 
-# definition - uma função para pesquisar um cliente na eliminação e na atualização.
+# definition - função para pesquisar um cliente na eliminação e na atualização.
 def pesquisar_cliente_opcao():
     while True:
         escolha = ""
@@ -290,7 +290,7 @@ def pesquisar_cliente_opcao():
                     print("\nOpção inválida, escolha de novo.")
 
 
-# definition - uma função para atualizar um cliente, onde é escolhido qual campo a atualizar.
+# definition - função para atualizar um cliente, onde é escolhido qual campo a atualizar.
 def atualizar_clientes():
     print("pesquise o cliente que deseja atualizar")
     pesquisar_cliente_opcao()
@@ -319,137 +319,151 @@ def atualizar_clientes():
                 print("12 - Alterar notas")
                 print("13 - Voltar ao menu principal")
                 escolha = input("\nEscolha uma opção: ")
-                if escolha < "1" or escolha > "13":
+                if not escolha.isdigit():
                     print("\nOpção errada, escolha de novo")
                 else:
-                    match escolha:
-                        case "1":
-                            while True:
-                                cliente["nome"] = input("Nome: ")
-                                if cliente["nome"].isdigit():
-                                    print("\nTem de usar apenas texto.")
-                                else:
-                                    break
-                        case "2":
-                            while True:
-                                cliente_variavel = input("Idade: ")
-                                if cliente_variavel.isdigit():
-                                    cliente["idade"] = int(cliente_variavel)
-                                    break
-                                else:
-                                    print("\nTem de usar apenas numeros para a idade.")
-                        case "3":
-                            while True:
-                                cliente["cidade"] = input("Cidade: ")
-                                if cliente["cidade"].isdigit():
-                                    print("\nTem de usar apenas texto.")
-                                else:
-                                    break
-                        case "4":
-                            while True:
-                                cliente["area_profissional"] = input(
-                                    "Área Profissional: "
-                                )
-                                if cliente["area_profissional"].isdigit():
-                                    print("\nTem de usar apenas texto.")
-                                else:
-                                    break
-                        case "5":
-                            while True:
-                                cliente["assunto"] = input("Assunto: ")
-                                if cliente["assunto"].isdigit():
-                                    print("\nTem de usar apenas texto.")
-                                else:
-                                    break
-                        case "6":
-                            while True:
-                                cliente["genero"] = (input("Gênero (m/f): ")).lower()
-                                if cliente["genero"].isdigit():
-                                    print(
-                                        "\nTem de usar 'm' para masculino ou 'f' para feminino."
-                                    )
-                                elif cliente["genero"].lower() not in ["m", "f"]:
-                                    print(
-                                        "\nTem de usar 'm' para masculino ou 'f' para feminino."
-                                    )
-                                else:
-                                    break
-                        case "7":
-                            while True:
-                                cliente_variavel = input("Valor da Consulta: ")
-                                if not cliente_variavel.replace(".", "").isdigit():
-                                    print(
-                                        "\nTem de usar números para o valor da consulta."
-                                    )
-                                else:
-                                    cliente["valor_consulta"] = float(cliente_variavel)
-                                    break
-                        case "8":
-                            while True:
-                                cliente["tipo_consulta"] = input(
-                                    "Tipo de Consulta (presencial/online): "
-                                )
-                                if cliente["tipo_consulta"].isdigit():
-                                    print("\nTem de usar apenas texto.")
-                                elif cliente["tipo_consulta"].lower() not in [
-                                    "presencial",
-                                    "online",
-                                ]:
-                                    print("\nTem de usar 'presencial' ou 'online'.")
-                                else:
-                                    break
-                        case "9":
-                            while True:
-                                cliente["data_consulta"] = input(
-                                    "Data da Consulta (YYYY-MM-DD): "
-                                )
-                                if not cliente["data_consulta"].isdigit():
-                                    print(
-                                        "\nTem de usar o formato YYYY-MM-DD para a data."
-                                    )
-                                    print("--- Exemplo: 2024-05-15 -----")
-                                else:
-                                    break
-                        case "10":
-                            while True:
-                                cliente["casado"] = input("Casado (s/n): ").lower()
-                                if cliente["casado"].isdigit():
-                                    print("\nTem de usar 's' para sim ou 'n' para não.")
-                                else:
-                                    if cliente["casado"] == "s":
-                                        cliente["casado"] = True
+                    escolha2 = int(escolha)
+                    if escolha2 < 1 or escolha2 > 13:
+                        print("\nOpção errada, escolha de novo")
+                    else:
+                        match escolha2:
+                            case 1:
+                                while True:
+                                    cliente["nome"] = input("Nome: ")
+                                    if cliente["nome"].isdigit():
+                                        print("\nTem de usar apenas texto.")
+                                    else:
                                         break
-                                    elif cliente["casado"] == "n":
-                                        cliente["casado"] = False
+                            case 2:
+                                while True:
+                                    cliente_variavel = input("Idade: ")
+                                    if cliente_variavel.isdigit():
+                                        cliente["idade"] = int(cliente_variavel)
                                         break
                                     else:
                                         print(
+                                            "\nTem de usar apenas numeros para a idade."
+                                        )
+                            case 3:
+                                while True:
+                                    cliente["cidade"] = input("Cidade: ")
+                                    if cliente["cidade"].isdigit():
+                                        print("\nTem de usar apenas texto.")
+                                    else:
+                                        break
+                            case 4:
+                                while True:
+                                    cliente["area_profissional"] = input(
+                                        "Área Profissional: "
+                                    )
+                                    if cliente["area_profissional"].isdigit():
+                                        print("\nTem de usar apenas texto.")
+                                    else:
+                                        break
+                            case 5:
+                                while True:
+                                    cliente["assunto"] = input("Assunto: ")
+                                    if cliente["assunto"].isdigit():
+                                        print("\nTem de usar apenas texto.")
+                                    else:
+                                        break
+                            case 6:
+                                while True:
+                                    cliente["genero"] = (
+                                        input("Gênero (m/f): ")
+                                    ).lower()
+                                    if cliente["genero"].isdigit():
+                                        print(
+                                            "\nTem de usar 'm' para masculino ou 'f' para feminino."
+                                        )
+                                    elif cliente["genero"].lower() not in ["m", "f"]:
+                                        print(
+                                            "\nTem de usar 'm' para masculino ou 'f' para feminino."
+                                        )
+                                    else:
+                                        break
+                            case 7:
+                                while True:
+                                    cliente_variavel = input("Valor da Consulta: ")
+                                    if not cliente_variavel.replace(".", "").isdigit():
+                                        print(
+                                            "\nTem de usar números para o valor da consulta."
+                                        )
+                                    else:
+                                        cliente["valor_consulta"] = float(
+                                            cliente_variavel
+                                        )
+                                        break
+                            case 8:
+                                while True:
+                                    cliente["tipo_consulta"] = input(
+                                        "Tipo de Consulta (presencial/online): "
+                                    )
+                                    if cliente["tipo_consulta"].isdigit():
+                                        print("\nTem de usar apenas texto.")
+                                    elif cliente["tipo_consulta"].lower() not in [
+                                        "presencial",
+                                        "online",
+                                    ]:
+                                        print("\nTem de usar 'presencial' ou 'online'.")
+                                    else:
+                                        break
+                            case 9:
+                                while True:
+                                    cliente["data_consulta"] = input(
+                                        "Data da Consulta (YYYY-MM-DD): "
+                                    )
+                                    if not cliente["data_consulta"].isdigit():
+                                        print(
+                                            "\nTem de usar o formato YYYY-MM-DD para a data."
+                                        )
+                                        print("--- Exemplo: 2024-05-15 -----")
+                                    else:
+                                        break
+                            case 10:
+                                while True:
+                                    cliente["casado"] = input("Casado (s/n): ").lower()
+                                    if cliente["casado"].isdigit():
+                                        print(
                                             "\nTem de usar 's' para sim ou 'n' para não."
                                         )
-                        case "11":
-                            while True:
-                                cliente_variavel = input("Filhos (s/n): ").lower()
-                                if cliente_variavel.isdigit():
-                                    print("\nTem de usar 's' para sim ou 'n' para não.")
-                                else:
-                                    cliente["filhos"] = cliente_variavel == "s"
-                                    break
-                        case "12":
-                            while True:
-                                cliente["notas"] = input("Notas: ")
-                                if cliente["notas"].isdigit():
-                                    print("\nTem de usar apenas texto.")
-                                else:
-                                    break
-                        case "13":
-                            return
-                        case _:
-                            print("\nOpção inválida, escolha de novo.")
+                                    else:
+                                        if cliente["casado"] == "s":
+                                            cliente["casado"] = True
+                                            break
+                                        elif cliente["casado"] == "n":
+                                            cliente["casado"] = False
+                                            break
+                                        else:
+                                            print(
+                                                "\nTem de usar 's' para sim ou 'n' para não."
+                                            )
+                            case 11:
+                                while True:
+                                    cliente_variavel = input("Filhos (s/n): ").lower()
+                                    if cliente_variavel.isdigit():
+                                        print(
+                                            "\nTem de usar 's' para sim ou 'n' para não."
+                                        )
+                                    else:
+                                        cliente["filhos"] = cliente_variavel == "s"
+                                        break
+                            case 12:
+                                while True:
+                                    cliente["notas"] = input("Notas: ")
+                                    if cliente["notas"].isdigit():
+                                        print("\nTem de usar apenas texto.")
+                                    else:
+                                        break
+                            case 13:
+                                return
+                            case _:
+                                print("\nOpção inválida, escolha de novo.")
 
     print("\nCliente atualizado com sucesso!")
 
 
-# definition - uma função para criar um cliente.
+# definition - função para criar um cliente.
 def criar_clientes():
     novo_cliente = {}
     novo_cliente["id"] = gerar_proximo_id(listagem)
@@ -557,7 +571,7 @@ def criar_clientes():
     print("\nCliente criado com sucesso!")
 
 
-# definition - uma função para apagar um cliente.
+# definition - função para apagar um cliente.
 def apagar_clientes():
     print("pesquise o cliente que deseja apagar")
     pesquisar_cliente_opcao()
@@ -597,13 +611,13 @@ def ordenar_clientes():
                 for i in range(n):
                     # O último i elementos já estão no lugar
                     for j in range(0, n - i - 1):
-                        # Comparamos o nome atual com o próximo
-                        # Para descendente (Z-A), se o atual for MENOR que o próximo, trocamos
+                        # comparar o nome atual com o próximo
+                        # Para descendente (Z-A), se o atual for MENOR que o próximo é feita a troca de posição
                         if (
                             listagem[j]["nome"].lower()
                             < listagem[j + 1]["nome"].lower()
                         ):
-                            # Troca de posição (Mecânica clássica de Python)
+                            # Troca de posição
                             listagem[j], listagem[j + 1] = listagem[j + 1], listagem[j]
                 for cliente in listagem:
                     print("\n", cliente)
@@ -625,13 +639,11 @@ def ordenar_clientes():
                 print("\nA ordenar por ID (Descendente)...")
                 n = len(listagem)
                 for i in range(n):
-                    # Consideramos que o maior está na posição atual para haver uma referencia, e depois procuramos se existe algum maior que ele no resto da lista
                     indice = i
                     for j in range(i + 1, n):
-                        # Para descendente, procuramos se existe algum ID MAIOR que o atual
                         if listagem[j]["id"] > listagem[indice]["id"]:
                             indice = j
-                    # Troca o atual pelo maior encontrado
+
                     listagem[i], listagem[indice] = (
                         listagem[indice],
                         listagem[i],
@@ -693,30 +705,40 @@ def estatisticas():
         print("11 - Filtro para datas")
         print("12 - Voltar ao menu principal")
         escolha = input("\nEscolha uma opção: ")
-        match escolha:
-            case "1":
-                print("\nNúmero total de consultas:", len(listagem))
-            case "2":
-                if len(listagem) > 0:
-                    for cliente in listagem:
-                        idade_total = sum(cliente["idade"])
-                    idade_media = idade_total / len(listagem)
-                    print("\nIdade média dos clientes:", idade_media)
-                else:
-                    print("\nNenhum cliente registrado para calcular a idade média.")
-            case "3":
-                compara_cidades = {}
-                for cliente in listagem:
-                    cidade = cliente["cidade"]
-                    if cidade in compara_cidades:
-                        compara_cidades[cidade] += 1
-                    else:
-                        compara_cidades[cidade] = 1
-                print("\nCidades com mais consultas:")
-                for cidade in compara_cidades:
-                    print(f"{cidade}: {compara_cidades[cidade]} vezes")
-            case "4":
-                pass
+        if not escolha.isdigit():
+            print("\nOpção errada, escolha de novo")
+        else:
+            escolha2 = int(escolha)
+            if escolha2 < 1 or escolha2 > 13:
+                print("\nOpção errada, escolha de novo")
+            else:
+                match escolha:
+                    case 1:
+                        print("\nNúmero total de consultas:", len(listagem))
+                    case 2:
+                        if len(listagem) > 0:
+                            for cliente in listagem:
+                                idade_total = sum(cliente["idade"])
+                            idade_media = idade_total / len(listagem)
+                            print("\nIdade média dos clientes:", idade_media)
+                        else:
+                            print(
+                                "\nNenhum cliente registrado para calcular a idade média."
+                            )
+                    case 3:
+                        compara_cidades = {}
+                        for cliente in listagem:
+                            cidade = cliente["cidade"]
+                            if cidade in compara_cidades:
+                                compara_cidades[cidade] += 1
+                            else:
+                                compara_cidades[cidade] = 1
+                        print("\nCidades com mais consultas:")
+                        for cidade in compara_cidades:
+                            print(f"{cidade}: {compara_cidades[cidade]} vezes")
+
+                    case 4:
+                        pass
 
         # else:
         #     print("Nenhum cliente registrado para calcular estatísticas.")
